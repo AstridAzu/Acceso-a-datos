@@ -12,7 +12,7 @@ public class ejemplo3BufferedReaderLecturaLineaPorLinea {
         // Obtener la ruta raíz del proyecto
         String rutaRaiz = Paths.get("").toAbsolutePath().toString();
 
-        // Construir la ruta completa del archivo entrada.txt dentro de src
+        // Construir la ruta completa del archivo archivo1.txt dentro de src
 
         String rutaArchivo = rutaRaiz + "\\src\\EjemploDeIntroduccion\\entrada.txt";
         // Leer el archivo línea por línea

@@ -1,0 +1,4 @@
+INICI0zado de documeMEDIO
+esta es la priFINALlinea del contenido
+esta es la segunda linea del contenido
+final de documento

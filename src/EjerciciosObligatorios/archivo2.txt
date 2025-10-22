@@ -1,0 +1,2 @@
+JavaScript en web
+Java en backend
