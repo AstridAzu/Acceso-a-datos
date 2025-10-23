@@ -10,7 +10,7 @@ import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class SistemaDeLogging {
+public class Ejercicio3SistemaDeLogging {
 
     enum NivelLog {
         INFO, WARNING, ERROR
@@ -20,7 +20,7 @@ public class SistemaDeLogging {
     private int numeroRotacion;
     private DateTimeFormatter FormatoFecha = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    public SistemaDeLogging(String archivoLog, long tamañoMaximo) {
+    public Ejercicio3SistemaDeLogging(String archivoLog, long tamañoMaximo) {
         if (archivoLog == null || archivoLog.trim().isEmpty() ) {
             throw new IllegalArgumentException("archivoLog no puede ser nulo.");
 
@@ -96,7 +96,7 @@ public class SistemaDeLogging {
     }
     public static void main(String[] args) {
         try{
-            SistemaDeLogging log=new SistemaDeLogging("app.log",1024);
+            Ejercicio3SistemaDeLogging log=new Ejercicio3SistemaDeLogging("app.log",1024);
             // Escribir algunos mensajes
             log.escribirLog("Aplicación iniciada", NivelLog.INFO);
             log.escribirLog("Usuario conectado", NivelLog.INFO);
