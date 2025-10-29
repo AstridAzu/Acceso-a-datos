@@ -119,7 +119,24 @@ public class EjercicioOpcional1ExportadorDeBaseDeDatosAArchivoBinario {
      * @throws SQLException si ocurre un error en la base de datos
      */
     public static void crearProductosPorDefecto(Connection conn) throws SQLException {
+
+
         Statement st = conn.createStatement();
+        //if si la tabla existe return
+        DatabaseMetaData metaData = conn.getMetaData();
+
+        ResultSet rs = metaData.getTables(conn.getCatalog(), null, "productos", new String[]{"TABLE"});
+
+        if (rs.next()) {
+            System.out.println("La tabla inventario existe.");
+            return ;
+        } else {
+            System.out.println("La tabla inventario NO existe.");
+
+        }
+
+
+
         String sqlCrearTabla = """
             CREATE TABLE IF NOT EXISTS productos (
                 cod_producto INTEGER PRIMARY KEY,
