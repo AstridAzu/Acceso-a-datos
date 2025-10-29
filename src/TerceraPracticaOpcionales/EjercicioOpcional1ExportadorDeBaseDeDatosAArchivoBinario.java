@@ -12,7 +12,6 @@ public class EjercicioOpcional1ExportadorDeBaseDeDatosAArchivoBinario {
             Connection conn = DriverManager.getConnection(url, "root", "123456");
             //crea la tabla productos e inserta 2 productos
             crearProductosPorDefecto(conn);
-
             // Exportar
             int exportados = exportarProductos(conn, "backup_productos.dat");
             System.out.println("Productos exportados: " + exportados);
